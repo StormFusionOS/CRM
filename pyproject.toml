@@ -1,0 +1,29 @@
+[project]
+name = "ai-crm-backend"
+version = "0.1.0"
+description = "Self-hosted CRM/SaaS backend built with FastAPI and Celery"
+authors = [{name = "AI Assistant", email = "noreply@example.com"}]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "pydantic-settings",
+    "sqlalchemy>=2.0",
+    "python-jose[cryptography]",
+    "passlib[bcrypt]",
+    "celery[redis]",
+    "redis",
+    "twilio",
+    "python-multipart",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
